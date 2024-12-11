@@ -10,17 +10,14 @@
     &__logo {
         z-index: 3; 
     }
-    &__links {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-    &__link {
-        @include hover {
-            color: var(--color-blue);
+    &__phone {
+        &_link {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            gap: 10px;
         }
+
     }
 }
 

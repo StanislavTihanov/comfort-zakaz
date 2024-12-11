@@ -1,8 +1,9 @@
 :root {
     --color-black: #000000;
     --color-white: #FFFFFF;
-    --color-gray: #F3F3F3;
-    --color-blue: #2735cd;
+    --color-orange: #FEAD0E;
+    --color-green: #19BB4F;
+    --color-gray: #818181;
 
     --border: 1px solid var(--color-black);
     --border-radius: 10px;
@@ -10,10 +11,10 @@
 
     --shadow: 0px 0px 20px 0px var(--color-black);
 
-    --font-family-base: 'Montserrat', sans-serif;
+    --font-family-base: 'Intro', sans-serif;
 
-    --container-width: 91.21rem;
-    --container-padding-x: 0.6rem;
+    --container-width: 82.75rem;
+    --container-padding-x: 1rem;
 
     --section-padding-y: 3.13rem;
 }

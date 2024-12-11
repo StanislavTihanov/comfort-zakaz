@@ -10,6 +10,19 @@
 //  }, 1000);
 //}
 //------------------------------------------------------------------------preloader
+  document.addEventListener('DOMContentLoaded', () => {
+    // Находим все элементы с классом "progress-bar"
+    const progressBars = document.querySelectorAll('.progress-bar');
+    
+    progressBars.forEach(bar => {
+      // Получаем значение процента из атрибута data-percent
+      const percent = bar.getAttribute('data-percent');
+      // Устанавливаем ширину для внутреннего заполнения
+      const fill = bar.querySelector('.progress-bar__fill');
+      fill.style.width = percent + '%';
+    });
+  });
+
 
 
 //------------------------------------------------------------------------появление бекграунда у шапки при прокрутки вниз
@@ -43,29 +56,6 @@
 //});
 
 //------------------------------------------------------------------------search
-
-
-
-
-
-//------------------------------------------------------------------------Меню-Бургер
-const burgerMenu = document.querySelector('.burger__wrapper');
-const menuBody= document.querySelector('.menu');
-
-if(burgerMenu) {
-    burgerMenu.addEventListener("click", function (e) {
-      burgerMenu.classList.toggle('_active');
-      menuBody.classList.toggle('_active');
-    });
-}
-//------------------------------------------------------------------------закрытие меню при клике вне его
-document.addEventListener ('click', (e) => {
-  if (!burgerMenu.contains(e.target)) {
-    menuBody.classList.remove('_active');
-    burgerMenu.classList.remove('_active');
-  }
-})
-//------------------------------------------------------------------------закрытие меню при клике вне его
 
 
 //------------------------------------------------------------------------Прокрутка при клике
