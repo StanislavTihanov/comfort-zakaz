@@ -1,0 +1,207 @@
+/*----------------------------------compare--------------------------------*/
+.compare {
+    &__top {
+        margin-bottom: 2.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        &_item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            @include fluid-text(14, 16);
+            @include mobile {
+                gap: 0.5rem;
+            }
+            &:nth-child(2) span {
+                background: linear-gradient(to bottom, #A4E4BA, #19BB4F);
+                opacity: 0.5;
+            }
+            &:nth-child(3) span {
+                background: linear-gradient(to bottom, #A4E4BA, #19BB4F);
+            }
+           span {
+               width: 16px;
+               height: 16px;
+               background-color: #F0F0F0;
+               display: block;
+               border-radius: 4px;
+           }
+        }
+    }
+
+    &__items {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-bottom: 2.5rem;
+        @include mobile {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        @include fluid-text(14, 16);
+        &_close {
+            cursor: pointer;
+        }
+    }
+    &__list {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin-bottom: 4rem;
+        @include mobile {
+            display: none;
+        }
+        &_item {
+            border: 1px solid #D9D9D9;
+            padding: 1rem 2.5rem;
+            border-radius: 20px;
+            cursor: pointer;
+            &:hover {
+                border: 1px solid var(--color-green); 
+            }
+        }
+    }
+    &__button {
+        background-color: var(--color-green);
+        color: var(--color-white);
+        padding: 0.9rem 8rem;
+        @include fluid-text(16, 19);
+        border-radius: 8px;
+        margin-bottom: 5rem;
+        &:hover {
+            background-color: var(--color-gray);
+        }
+        @include mobile {
+            width: 100%;
+            padding: 0.9rem;
+            margin-bottom: 2rem;
+        }
+    }
+    &__block{
+        display: flex;
+        align-items: center;
+        gap: 1rem 3rem;
+        margin-bottom: 1.5rem;
+        @include mobile {
+            gap: 1rem 2rem;
+        }
+    }
+    &__percent {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+    &__figure {
+        color: var(--color-green);
+        @include fluid-text(19, 36);
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 10px;
+    }
+    &__progress {
+        width: 30%;
+        @include mobile {
+            width: 100%;
+        }
+        .progress-bar {
+            height: 5rem;
+            border-radius: 8px;
+            background: inherit;
+            margin-bottom: 0rem;
+            @include mobile {
+                height: 2.2rem;
+                border-radius: 4px;
+            }
+        }
+        .progress-bar__fill {
+            background: #F0F0F0;
+            display: flex;
+            align-items: center;
+            @include fluid-text(16, 24);
+            white-space: nowrap;
+            padding-left: 1.8rem;
+            @include mobile {
+                padding-left: 0.5rem;
+                border-radius: 4px;
+            }
+        }
+        .progress-bar__fill--color {
+            background: linear-gradient(90deg, #A4E4BA, #19BB4F);
+        }
+    }
+    &__dropdown {
+        display: none;
+        margin-bottom: 1.5rem;
+        border: 1px solid #D9D9D9;
+        padding: 0.9rem 1rem;
+        border-radius: 8px;
+        @include mobile {
+            display: block;
+        }
+        .dropdown__button {
+            font-size: 1rem;
+            color: var(--color-black);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            svg {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translate(-50%, -50%);
+                
+            }
+        }
+        .dropdown__list {
+            left: -10px;
+        }
+    }
+}
+.question {
+    position: relative;
+    &__info {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        top: 0;
+        left: 0;
+        background-color: var(--color-white);
+        padding: 1rem;
+        border-radius: 12px;
+        box-shadow: 4px 4px 24px 4px rgba(0, 0, 0, 0.05);
+        font-size: 0.9rem;
+        min-width: 14rem;
+    }
+    svg {
+        position: absolute;
+        top: -2.5rem;
+        cursor: pointer;
+        @include mobile {
+            top: -2.5rem;
+        }
+    }
+    &:hover .question__info{
+        opacity: 1;
+        visibility: visible;
+        z-index: 99;
+    }
+}
+/*----------------------------------compare--------------------------------*/

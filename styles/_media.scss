@@ -5,7 +5,7 @@ $table-above: 64.3rem;
 $table: 64rem;
 
 $mobile-above: 48.3rem;
-$mobile: 48rem;
+$mobile: 48.5rem;
 
 @mixin desktop {
     @media(max-width: $desktop) {

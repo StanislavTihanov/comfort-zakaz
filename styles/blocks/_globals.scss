@@ -5,7 +5,6 @@ body.lock {
 body { 
     font-family: var(--font-family-base); 
     font-size: 1rem;
-    font-weight: 400; 
     color: var(--color-black); 
     background: var(--color-white);
 }
@@ -38,14 +37,32 @@ section {
     }
 }
 .title {
+    font-family: 'Merriweather';
     @include fluid-text(24, 36);
     line-height: 100%;
-    color: var(--color-red);
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 24px;
+    img {
+        @include mobile {
+            width: 3.7rem;
+        }
+    }
 }
 .subtitle {
     @include fluid-text(18, 32);
     line-height: 100%;
     color: var(--color-white);
 }
-
+.wrapper--mod {
+    background-color: var(--color-gray);
+}
+.hidden {
+    display: block;
+}
+.hide {
+    display: none;
+}
 /*----------------------------------global--------------------------------*/
