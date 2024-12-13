@@ -404,8 +404,18 @@ section {
   gap: 8px;
   position: relative;
 }
+@media (max-width: 48.5rem) {
+  .item__info {
+    gap: 5px;
+  }
+}
 .item__info .question {
   top: 1.9rem;
+}
+@media (max-width: 48.5rem) {
+  .item__info .question {
+    position: static;
+  }
 }
 .item__percent {
   font-weight: 700;
@@ -1003,6 +1013,8 @@ section {
 @media (max-width: 48.5rem) {
   .question svg {
     top: -2.5rem;
+    width: 1rem;
+    position: static;
   }
 }
 .question:hover .question__info {

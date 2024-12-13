@@ -196,6 +196,8 @@
         cursor: pointer;
         @include mobile {
             top: -2.5rem;
+            width: 1rem;
+            position: static;
         }
     }
     &:hover .question__info{

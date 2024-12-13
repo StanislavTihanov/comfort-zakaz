@@ -162,8 +162,14 @@
         align-items: center;
         gap: 8px;
         position: relative;
+        @include mobile {
+            gap: 5px;
+        }
         .question {
             top: 1.9rem;
+            @include mobile {
+                position: static;
+            }
         }
     }
     &__percent {
